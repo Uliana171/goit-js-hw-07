@@ -13,87 +13,14 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('#gallery');
+const galleryEl = document.querySelector("#gallery");
 console.log(galleryEl);
 
-// const itemEl = document.createElement('li');
-// const imgEl = document.createElement('img');
-// itemEl.append(imgEl);
-// console.log(itemEl);
-
-const items = [];
-
-// for (let index = 0; index < images.length; index++) {
-//   const image = images[index];
-//   const src = `${image.url}`; 
-//   const alt = image.alt;
-//   const itemEl = `<div><img srs = "${src}" alt = "${alt}" loading = "lazy" width= "600"></img></div>`;
-//   items.push(itemEl);
-// }
-// galleryEl.insertAdjacentHTML('beforeend', items.join(''));
-// console.log();
-
-
-
 images.forEach(image => {
-  const src = image.url; 
-  const alt = image.alt;
-  const itemEl = `<li><img srs = "${src}" alt = "${alt}" width= "600"></img></li>`;
-  items.push(itemEl);
+  galleryEl.insertAdjacentHTML(
+    "afterbegin",
+    `<li><img src=${image.url} alt="${image.alt}" width = 600px heigth = 480></li>`
+  );
+  galleryEl.style.display = "flexbox";
+  galleryEl.style.listStyle = "none";
 });
-
-galleryEl.insertAdjacentHTML('beforeend', items.join(''));
-
-
-
-
-
-
-
-// const items = [];
-
-
-
-
-
-
-
-
-
-// const createElement = (images => {
-//   images.forEach(image => {
-//     const { url, alt = image };
-
-//     const itemEl = document.createElement('li');
-//     const imgEl = document.createElement('img');
-
-//     imgEl.src = `${url}`;
-//     imgEl.alt = `${alt}`;
-//     console.log(imgEl);
-  
-//     itemEl.insertAdjacentHTML("beforeend", imgEl)
-
-//     items.push(itemEl);
-//     itemEl.classList.add('item');
-//   });
-
-// });
-
-// createElement(images);
-// galleryEl.prepend(...items);
-// galleryEl.classList.add('gallery');
-
-
-// galleryEl.insertAdjacentHTML("beforeend", items.join(''));
-
-// const imgItemEl = document.createElement('li');
-// const imgEl = document.createElement('img');
-// console.log(imgEl);
-
-// for (let i = 0; i < images.length; i++) {
-//   const src = images[i].url;
-//   const alt = images[i].alt;
-//   const itemEl = `<li><div><img src="$(src)" alt = "$(alt)" loading = "lazy"/></div></li>`;
-// }
-// console.log(itemEl);
-
