@@ -19,18 +19,15 @@ console.log(incrementBtn);
 console.log(counterValue);
 
 decrementBtn.addEventListener('click', function () {
-    console.log('klik na dekrement');
-
+    // console.log('klik na dekrement');
     counter.decrement();
-    console.log(counter);
-
+    console.log(counter); 
+    
     counterValue.textContent = counter.value;
-
 });
 
 incrementBtn.addEventListener('click', function () {
-    console.log('klik na inkrement');
-
+   
     counter.increment();
     console.log(counter);
 
