@@ -10,7 +10,8 @@ const spanText = refs.outputEl.textContent;
 
 function onInputChange(event) {
     if (event.currentTarget.value === "") {
-        return refs.outputEl.textContent = spanText;
+        refs.outputEl.textContent = spanText;
+        return
     }
     refs.outputEl.textContent = event.currentTarget.value;
 };
